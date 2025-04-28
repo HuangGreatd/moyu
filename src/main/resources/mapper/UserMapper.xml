@@ -34,5 +34,13 @@
             </if>
         </where>
     </select>
+    <select id="selectUserByUserAccount" resultType="com.juzipi.domain.entity.User">
+        SELECT * FROM  user
+        <where>
+            <if test="userAccount != null">
+                And userAccount = #{userAccount}
+            </if>
+        </where>
+    </select>
 
 </mapper>
